@@ -16,11 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 Route::get('login', LoginForm::class)->name('login');
-Route::get('logout', function() {
+Route::get('logout', function () {
     Auth::logout();
+
     return redirect()->route('login');
 })->name('logout');
 
-Route::middleware('auth')->group(function() {
+Route::middleware('auth')->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
 });
