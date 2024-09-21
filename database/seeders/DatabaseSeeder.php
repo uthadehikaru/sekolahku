@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\AcademicYear;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -13,7 +16,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        AcademicYear::create([
+            'name' => Carbon::now()->format('Y') . '/' . Carbon::now()->addYear()->format('Y'),
+            'is_open_registration' => true,
+            'registration_start_date' => Carbon::now()->startOfMonth(),
+            'registration_end_date' => Carbon::now()->endOfMonth(),
+        ]);
 
         \App\Models\User::factory()->create([
             'name' => 'Admin',

@@ -189,6 +189,15 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'student_name' => 'Nama Calon Siswa',
+        'student_birth_place' => 'Tempat Lahir',
+        'student_birth_date' => 'Tanggal Lahir',
+        'student_gender' => 'Jenis Kelamin',
+        'parent_name' => 'Nama Orang Tua/Wali',
+        'parent_phone' => 'Nomor Telepon',
+        'parent_email' => 'Email',
+        'parent_address' => 'Alamat',
+    ],
 
 ];

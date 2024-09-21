@@ -1,73 +1,81 @@
-# Laravel Project
+# Website Sekolahku
 
-This is a Laravel-based web application project.
+Selamat datang di repositori Website Sekolahku, sebuah aplikasi web berbasis Laravel untuk manajemen pendaftaran siswa baru.
 
-## Description
+## Deskripsi
 
-This project is built using the Laravel PHP framework, providing a robust foundation for developing modern web applications. It includes features such as:
+Website Sekolahku adalah platform digital yang dirancang untuk memudahkan proses pendaftaran siswa baru. Aplikasi ini menyediakan antarmuka yang user-friendly bagi calon siswa dan orang tua, serta panel administrasi yang efisien bagi staf sekolah.
 
-- MVC architecture
-- Eloquent ORM for database interactions
-- Blade templating engine
-- Built-in authentication system
-- RESTful routing
-- Artisan command-line tool
+Fitur utama:
+- Pendaftaran online untuk calon siswa
+- Panel admin untuk mengelola pendaftaran
+- Sistem notifikasi email otomatis
+- Manajemen tahun ajaran
+- Laporan dan statistik pendaftaran
 
-## Setup Instructions
+## Instalasi
 
-Follow these steps to set up the project on your local machine:
+Ikuti langkah-langkah berikut untuk menginstal Website Sekolahku di mesin lokal Anda:
 
-1. Clone the repository:
+1. Clone repositori ini:
    ```
-   git clone https://github.com/your-username/your-project-name.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd your-project-name
+   git clone https://github.com/uthadehikaru/sekolahku.git
    ```
 
-3. Install PHP dependencies using Composer:
+2. Masuk ke direktori proyek:
+   ```
+   cd sekolahku
+   ```
+
+3. Instal dependensi PHP menggunakan Composer:
    ```
    composer install
    ```
 
-4. Copy the example environment file and create a new .env file:
+4. Salin file .env.example menjadi .env:
    ```
    cp .env.example .env
    ```
 
-5. Generate an application key:
+5. Generate kunci aplikasi:
    ```
    php artisan key:generate
    ```
 
-6. Configure your database in the .env file:
+6. Konfigurasi database Anda di file .env:
    ```
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=your_database_name
-   DB_USERNAME=your_database_username
-   DB_PASSWORD=your_database_password
+   DB_DATABASE=sekolahku
+   DB_USERNAME=root
+   DB_PASSWORD=
    ```
 
-7. Run database migrations:
+7. Jalankan migrasi database:
    ```
    php artisan migrate
    ```
 
-8. Start the development server:
+8. Jalankan server pengembangan:
    ```
    php artisan serve
    ```
 
-9. Visit `http://localhost:8000` in your web browser to see the application.
+9. Buka `http://localhost:8000` di browser Anda untuk mengakses aplikasi.
 
-## Additional Configuration
+## Penggunaan
 
-For more detailed configuration and customization options, please refer to the [Laravel documentation](https://laravel.com/docs).
+Setelah instalasi, Anda dapat:
+1. Mengakses halaman pendaftaran siswa baru di homepage.
+2. Masuk ke panel admin menggunakan kredensial default:
+   - Email: admin@laravel.test
+   - Password: secret
 
-## License
+## Kontribusi
 
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Kami sangat menghargai kontribusi Anda untuk Website Sekolahku. Silakan buat pull request atau laporkan issues jika Anda menemukan bug atau memiliki saran perbaikan.
+
+## Lisensi
+
+Website Sekolahku adalah perangkat lunak open-source yang dilisensikan di bawah [MIT license](https://opensource.org/licenses/MIT).

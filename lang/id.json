@@ -1,0 +1,5 @@
+{
+    "registration.status.pending": "Menunggu Konfirmasi",
+    "registration.status.accepted": "Diterima",
+    "registration.status.rejected": "Ditolak"
+}

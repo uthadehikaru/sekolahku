@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\RegistrationSuccess;
 use App\Livewire\LoginForm;
+use App\Livewire\RegistrationForm;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome');
+Route::get('/registration', RegistrationForm::class)->name('registration');
+Route::get('/registration/{registration:registration_number}', RegistrationSuccess::class)->name('registration.success');
 Route::get('login', LoginForm::class)->name('login');
 Route::get('logout', function () {
     Auth::logout();
